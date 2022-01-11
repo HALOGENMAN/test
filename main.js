@@ -24,14 +24,16 @@ const firestore = firebase.firestore();
 const btn = document.getElementById('btn')
 
 
+
 btn.onclick = async () =>{
   const inp = document.getElementById('inp')
-  console.log(inp.value)
+  // console.log(inp.value)
   const callDoc = firestore.collection('calls').doc()
-  console.log(callDoc.id)
+  // console.log(callDoc.id)
 
    callDoc.set({ name:inp.value })
   .then(()=>{
+    
     console.log("success")
   })
   .catch((err)=>{console.log(err)})
